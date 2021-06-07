@@ -1651,6 +1651,7 @@ glx_render_(session_t *ps, const glx_texture_t *ptex,
 /**
  * Render a region with color.
  */
+#ifdef DEBUG_GLX_PAINTREG
 static void
 glx_render_color(session_t *ps, int dx, int dy, int width, int height, int z,
     XserverRegion reg_tgt, const reg_data_t *pcache_reg) {
@@ -1721,6 +1722,7 @@ glx_render_dots(session_t *ps, int dx, int dy, int width, int height, int z,
 
   glx_check_err(ps);
 }
+#endif//DEBUG_GLX_PAINTREG
 
 /**
  * Swap buffer with glXCopySubBufferMESA().

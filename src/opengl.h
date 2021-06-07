@@ -136,6 +136,7 @@ static int
 glx_cmp_fbconfig(session_t *ps,
     const glx_fbconfig_t *pfbc_a, const glx_fbconfig_t *pfbc_b);
 
+#ifdef DEBUG_GLX_PAINTREG
 static void
 glx_render_color(session_t *ps, int dx, int dy, int width, int height, int z,
     XserverRegion reg_tgt, const reg_data_t *pcache_reg);
@@ -143,3 +144,4 @@ glx_render_color(session_t *ps, int dx, int dy, int width, int height, int z,
 static void
 glx_render_dots(session_t *ps, int dx, int dy, int width, int height, int z,
     XserverRegion reg_tgt, const reg_data_t *pcache_reg);
+#endif
